@@ -34,4 +34,4 @@ imprimirResultado(9.5)
 imprimirResultado(7)
 imprimirResultado(6.99)
 imprimirResultado(2)
-//imprimirResultado('AA') não aceitou a string, diz que 'entre' não foi definido. Ainda não entendi direito o por quê disso.
+//imprimirResultado('AA') não aceitou a string, diz que 'entre' não é uma function. Ainda não entendi direito o por quê disso.
