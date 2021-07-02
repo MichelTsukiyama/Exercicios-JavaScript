@@ -1,10 +1,10 @@
 const imprimirResultado = function (nota) {
     switch (Math. floor(nota)){
-        case 10:
+        case 10: //se não tiver nada vai passar o próximo parametro
         case 9:
             console.log('Quadro de honra')
             break
-        case 8: case 7:
+        case 8: case 7: //msm coisa do comentário anterior, mas não precisa estar na linha abaixo
             console.log ('Aprovado')
             break
         case 6: case 5: case 4:
