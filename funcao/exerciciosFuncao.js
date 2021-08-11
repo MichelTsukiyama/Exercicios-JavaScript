@@ -19,7 +19,7 @@ let verificarTriangulo = (a = 0, b = 0, c = 0) => {
         resultado = "Não é um triângulo"
     } else if (a === b && b === c) {
         resultado = "Equilátero"
-    } else if (a !== b && b !== c) {
+    } else if (a !== b && b !== c && c !== a) {
         resultado = "Escaleno"
     } else {
         resultado = "Isósceles"
@@ -29,7 +29,7 @@ let verificarTriangulo = (a = 0, b = 0, c = 0) => {
 
 verificarTriangulo(4, 5, 6)
 verificarTriangulo(2, 2, 2)
-verificarTriangulo(1, 3, 5)
+verificarTriangulo(3, 5, 3)
 verificarTriangulo(2, 0, 5)
 
 //03 - Crie uma função que recebe dois parâmetros, base e expoente, e retorne a base elevada ao expoente
