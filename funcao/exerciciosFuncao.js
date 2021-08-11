@@ -24,7 +24,7 @@ let verificarTriangulo = (a = 0, b = 0, c = 0) => {
     } else {
         resultado = "Isósceles"
     }
-    return console.log("Exercício 02 - ", resultado)
+    return console.log("Exercício 02 -", resultado)
 } 
 
 verificarTriangulo(4, 5, 6)
@@ -48,7 +48,7 @@ divisao(3,2)
 let valor = (preco) => console.log("Exercício 05 - R$"+preco.toFixed(2).replace('.' , ','))
 valor(0.30000000000000004)
 
-let valor2 = (preco) => console.log("Exercício 05 - ", preco.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'}))
+let valor2 = (preco) => console.log("Exercício 05 -", preco.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'}))
 valor2(0.30000000000000004)
 
 //06 - 
