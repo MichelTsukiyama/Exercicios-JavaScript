@@ -69,9 +69,9 @@ jurosCompostos(10000, 0.02, 5)
 //07 - Uma das vantagens da programação é a automatização de tarefas que não gostamos de realizar. Dito isto, elabore uma função cujo objetivo é resolver a fórmula de Bhaskara. Para isso, sua função deve receber três parâmetros, “ax2”, “bx” e “c”, de tal modo que na equação: 3x² - 5x + 12 os valores seriam respectivamente: 3,-5, 12. Como retorno deve ser passado um vetor que tem 2 valores um para cada possível resultado, mesmo que os resultados sejam iguais. Caso o delta seja negativo, retorne, ao invés do vetor, um string com a frase: “Delta é negativo”.
 
 const bhaskara = function (ax2, bx, c) {
-    const delta = bx**2 - 4 * ax2  * c 
+    const delta = (bx**2) - (4 * ax2  * c) 
     const x1 = (-bx + Math.sqrt(delta)) / (2 * ax2) 
-    const x2 = (bx + Math.sqrt(delta))/ (2 * ax2)
+    const x2 = (-bx - Math.sqrt(delta))/ (2 * ax2)
     const vetor = [x1, x2]
     if (delta < 0) {
         console.log('Exercício 07 - Delta é negativo')
@@ -88,4 +88,12 @@ String: “10 20 20 8 25 3 0 30 1”
 Retorno: [3, 7] (Significa que ele bateu três vezes seu recorde de melhor pontuação e a pior pontuação
 aconteceu no sétimo jogo.)*/
 
+let pontuacao_por_jogo = [10, 20, 20, 8, 25, 3, 0, 30, 1] 
 
+const verificarJogos = function () {
+    for (let recorde in pontuacao_por_jogo){
+        console.log (recorde, pontuacao_por_jogo[recorde])
+    }
+}
+
+verificarJogos(pontuacao_por_jogo)
