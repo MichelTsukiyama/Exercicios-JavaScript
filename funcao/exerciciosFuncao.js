@@ -82,18 +82,31 @@ const bhaskara = function (ax2, bx, c) {
 bhaskara(4, 2, -6)
 bhaskara(7, 3, 4)
 
-/*08 - Pedro joga N jogos de basquete por temporada. Para saber como está ele está progredindo, ele mantém registro de todos os as pontuações feitas por jogo. Após cada jogo ele anota no novo valor e confere se o mesmo é maior ou menor que seu melhor e pior desempenho. Dada uma lista string = “pontuação1 pontuação2 pontuação3 etc..”, escreva uma função que ao recebê-la irá comparar os valores um a um e irá retornar um vetor com o número de vezes que ele bateu seu recorde de maior número de pontos e quando fez seu pior jogo. (Número do pior jogo). Obs.: O primeiro jogo não conta como novo recorde do melhor.
+/*08 - Pedro joga N jogos de basquete por temporada. Para saber como está ele está progredindo, ele mantém registro de todos os as pontuações feitas por jogo. Após cada jogo ele anota no novo valor e confere se o mesmo é maior ou menor que seu melhor e pior desempenho. Dada uma lista string = “pontuação1 pontuação2 pontuação3 etc..”, escreva uma função que ao recebê-la irá comparar os valores um a um e irá retornar um vetor com o número de vezes que ele bateu seu pontuacao de maior número de pontos e quando fez seu pior jogo. (Número do pior jogo). Obs.: O primeiro jogo não conta como novo pontuacao do melhor.
 Exemplo:
 String: “10 20 20 8 25 3 0 30 1”
-Retorno: [3, 7] (Significa que ele bateu três vezes seu recorde de melhor pontuação e a pior pontuação
+Retorno: [3, 7] (Significa que ele bateu três vezes seu pontuacao de melhor pontuação e a pior pontuação
 aconteceu no sétimo jogo.)*/
 
-let pontuacao_por_jogo = [10, 20, 20, 8, 25, 3, 0, 30, 1] 
+let registros = [10, 20, 20, 8, 25, 3, 0, 30, 1] 
 
 const verificarJogos = function () {
-    for (let recorde in pontuacao_por_jogo){
-        console.log (recorde, pontuacao_por_jogo[recorde])
+    let melhor_recorde = 0
+    let contar_recordes = -1
+    let pior_pontucao = registros[0]
+    for (let pontuacao in registros){
+        if (registros[pontuacao] > melhor_recorde) {
+            melhor_recorde = registros[pontuacao]
+            contar_recordes++   
+        }
+        if (registros[pontuacao] < pior_pontucao)
+        pior_pontucao = registros[pontuacao]
     }
+    let resultados = [contar_recordes, pior_pontucao]
+    return  console.log('Exercício 08 - ', resultados)   
 }
 
-verificarJogos(pontuacao_por_jogo)
+verificarJogos(registros)
+
+/*09 - Construa uma função para um sistema de notas de uma instituição que possui a seguinte política de classificação: Todo aluno recebe uma nota de 0 a 100. Alunos com nota abaixo de 40 são reprovados. As notas possuem a seguinte regra de arredondamento: Se a diferença entre a nota e o próximo múltiplo de 5 for menor que 3, arredondar a nota para esse próximo múltiplo de 5. Se a nota for abaixo de 38, não é feito nenhum arredondamento pois esta nota resulta na reprovação do aluno. Por exemplo, a nota 84 será arredondada para 85, mas a nota 29 não será arredondada por ser abaixo de 40 e não ser possível arredondamento eficiente, ou seja, que evite a reprovação do aluno. No caso de a nota ser 38, o arredondamento é possível pois atingirá 40 e o aluno será aprovado.*/
+
